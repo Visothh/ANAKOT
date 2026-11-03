@@ -162,3 +162,74 @@ footer {
   border: 0;
   border-radius: 0.75rem;
 }
+
+/* ---------- Page extras ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+.jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ---------- Expandable details ---------- */
+details {
+  margin-top: 0.75rem;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Tables ---------- */
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: #ffffff;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  color: var(--navy);
+}
+
+th,
+td {
+  border: 1px solid #dde1ee;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  background: var(--navy);
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background: #f0f2fa;
+}
+
+tbody tr:hover {
+  background: #e1e6f7;
+}
