@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 :root {
-  --navy: #1f2a5c;
-  --accent: #e63946;
-  --bg: #f5f7fb;
-  --text: #222222;
+  --navy: #1e4fd8;
+  --navy-rgb: 13, 27, 58;
+  --blue: #1e4fd8;
+  --aqua: #5eead4;
+  --accent: #d90429;
+  --highlight: #5eead4;
+  --bg: #f3f8fe;
+  --text: #0d1b3a;
+  --line: #d5e4fb;
+  --line-strong: #b5ccf3;
+  --tint: #eaf2fd;
+  --tint-hover: #d5e4fb;
+  --nav-visited: #d5e4fb;
 }
 
 * {
@@ -91,7 +100,7 @@ footer {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(rgba(31, 42, 92, 0.6), rgba(31, 42, 92, 0.6)),
+  background: linear-gradient(rgba(var(--navy-rgb), 0.6), rgba(var(--navy-rgb), 0.6)),
               url("images/hero.jpg") center / cover no-repeat;
   color: #ffffff;
   text-align: center;
@@ -123,7 +132,7 @@ footer {
 
 .card {
   background: #ffffff;
-  border: 1px solid #dde1ee;
+  border: 1px solid var(--line);
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -216,7 +225,7 @@ caption {
 
 th,
 td {
-  border: 1px solid #dde1ee;
+  border: 1px solid var(--line);
   padding: 0.5rem 0.75rem;
   text-align: left;
 }
@@ -227,11 +236,11 @@ th {
 }
 
 tbody tr:nth-child(even) {
-  background: #f0f2fa;
+  background: var(--tint);
 }
 
 tbody tr:hover {
-  background: #e1e6f7;
+  background: var(--tint-hover);
 }
 
 /* ---------- Transitions and hover effects (extra credit) ---------- */
@@ -241,7 +250,7 @@ tbody tr:hover {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(31, 42, 92, 0.18);
+  box-shadow: 0 10px 20px rgba(var(--navy-rgb), 0.18);
 }
 
 .card img {
@@ -263,7 +272,7 @@ nav a {
 /* ---------- Scholarships page ---------- */
 .tag {
   display: inline-block;
-  background: #e1e6f7;
+  background: var(--tint-hover);
   color: var(--navy);
   font-size: 0.8rem;
   font-weight: 600;
@@ -295,7 +304,7 @@ td a {
 /* ---------- Help page ---------- */
 .steps-box {
   background: #ffffff;
-  border: 1px solid #dde1ee;
+  border: 1px solid var(--line);
   border-radius: 0.75rem;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -325,7 +334,7 @@ td a {
 
 .faq details {
   background: #ffffff;
-  border: 1px solid #dde1ee;
+  border: 1px solid var(--line);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
 }
@@ -350,7 +359,7 @@ td a {
 .contact-card,
 .contact-form {
   background: #ffffff;
-  border: 1px solid #dde1ee;
+  border: 1px solid var(--line);
   border-radius: 0.75rem;
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -406,7 +415,7 @@ td a {
 
 /* ---------- Form ---------- */
 fieldset {
-  border: 1px solid #dde1ee;
+  border: 1px solid var(--line);
   border-radius: 0.5rem;
   padding: 1rem 1.25rem;
   margin-bottom: 1.25rem;
@@ -436,7 +445,7 @@ select,
 textarea {
   width: 100%;
   padding: 0.6rem 0.75rem;
-  border: 1px solid #b9c0dc;
+  border: 1px solid var(--line-strong);
   border-radius: 0.5rem;
   font: inherit;
   background: #ffffff;
@@ -491,4 +500,91 @@ button.btn {
 .btn.btn-outline:hover {
   background: var(--navy);
   color: #ffffff;
+}
+
+/* ---------- Sticky footer ---------- */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ---------- Responsive: tablet ---------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.25rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ---------- Responsive: mobile ---------- */
+@media (max-width: 480px) {
+  html {
+    font-size: 90%;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .card-grid,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .jump-links .btn,
+  .form-actions .btn {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  th,
+  td {
+    padding: 0.4rem 0.5rem;
+  }
+
+  .contact-card,
+  .contact-form,
+  .steps-box {
+    padding: 1rem;
+  }
+
+  fieldset {
+    padding: 0.75rem;
+  }
+
+    nav ul {
+    gap: 0.5rem 0.9rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
 }
