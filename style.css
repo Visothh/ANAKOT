@@ -338,3 +338,157 @@ td a {
 .help-cta p {
   margin-bottom: 1rem;
 }
+
+/* ---------- Contact page ---------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-card,
+.contact-form {
+  background: #ffffff;
+  border: 1px solid #dde1ee;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h3,
+.contact-form h3 {
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+.contact-card ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.contact-card li {
+  margin-bottom: 0.75rem;
+}
+
+.contact-card a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Social links ---------- */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.contact-card .social-links a:link,
+.contact-card .social-links a:visited {
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.contact-card .social-links a:hover {
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.contact-card .social-links a:active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+/* ---------- Form ---------- */
+fieldset {
+  border: 1px solid #dde1ee;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label,
+.group-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #b9c0dc;
+  border-radius: 0.5rem;
+  font: inherit;
+  background: #ffffff;
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+}
+
+.radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.radio-row label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button.btn {
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.btn-outline {
+  background: transparent;
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+.btn.btn-outline:hover {
+  background: var(--navy);
+  color: #ffffff;
+}
