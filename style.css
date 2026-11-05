@@ -291,3 +291,50 @@ td a {
   color: var(--accent);
   font-weight: 600;
 }
+
+/* ---------- Help page ---------- */
+.steps-box {
+  background: #ffffff;
+  border: 1px solid #dde1ee;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.steps {
+  padding-left: 1.5rem;
+}
+
+.steps li {
+  margin-bottom: 1rem;
+  padding-left: 0.25rem;
+}
+
+.steps li:last-child {
+  margin-bottom: 0;
+}
+
+.steps li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.steps strong {
+  color: var(--navy);
+}
+
+.faq details {
+  background: #ffffff;
+  border: 1px solid #dde1ee;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.help-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.help-cta p {
+  margin-bottom: 1rem;
+}
