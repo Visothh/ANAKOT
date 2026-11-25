@@ -131,6 +131,8 @@ footer {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 0.75rem;
@@ -146,7 +148,22 @@ footer {
 }
 
 .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1rem;
+}
+
+/* Push the last item (Learn more / View details / Apply now) to the bottom
+   so every card in a row lines up with the longest one */
+.card-body > a:last-child,
+.card-body > details:last-child {
+  margin-top: auto;
+}
+
+/* Keep a minimum gap above that last item on the longest card */
+.card-body > :nth-last-child(2) {
+  margin-bottom: 1rem;
 }
 
 .card-body h3 {
@@ -293,7 +310,8 @@ nav a {
 }
 
 .card-body .btn {
-  margin-top: 1rem;
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 td a {
